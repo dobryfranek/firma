@@ -55,7 +55,7 @@ function get_income() {
 
     echo sprintf("<p>Najwyższa pensja wynosi: %szł</p>", max($pensje));
     echo sprintf("<p>Najmniejsza pensja wynosi: %szł</p>", min($pensje));
-    echo sprintf("<p>Średnia pensja wynosi: %szł</p>", round(array_sum($pensje) / count($pensje)));
+    echo sprintf("<p>Średnia pensja wynosi: %szł</p>", round(array_sum($pensje) / count($pensje), 2));
 
     return 0;
 }
