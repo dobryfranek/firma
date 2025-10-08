@@ -41,6 +41,15 @@ footer {
     padding: 10px;
 }
 
+tr:nth-child(2n-3) {
+    background-color: #9eb6b6;
+}
+
+th {
+    background-color: #006633;
+    color: white;
+}
+
 td {
     width: 300px;
     border: 2px solid green;
@@ -53,9 +62,4 @@ p {
     color: #003300;
     font-size: 20px;
     font-weight: bold;
-}
-
-th {
-    background-color: #006633;
-    color: white;
 }
