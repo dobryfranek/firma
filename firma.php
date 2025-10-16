@@ -17,9 +17,13 @@ define("DATABASE", "firma");
 
 $conn = new mysqli(SERVERNAME, USERNAME, PASSWORD, DATABASE);
 
+function dodaj($liczba1, $liczba2) {
+    return $liczba1 + $liczba2;
+}
+
 function get_table() {
     global $conn;
-    $sql = "SELECT imie, nazwisko, pensja FROM pracownicy WHERE data_urodzenia < '1975-01-01'";
+    $sql = "SELECT imie, nazwisko, pensja FROM pracownicy WHERE data_urodzenia < '1975-01-01' AND plec = 'm' ORDER BY pensja DESC";
     $result = $conn->query($sql);
 
     echo "<tr><th>Imię</th><th>Nazwisko</th><th>Pensja</th>";
